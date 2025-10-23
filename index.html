@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dime Solutions Limited</title>
+  <link rel="stylesheet" href="style.css"
+ 
+
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dime Solutions Limited</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: white;
+      background: #0b2136;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00d2ff;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* Only HOME section has background image */
+    #home {
+      background: url('https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg')
+        no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* --- BUTTON STYLES --- */
+    .btn-group {
+      margin-top: 40px;
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 40px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 18px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00d2ff, #0077ff);
+      color: white;
+      border: none;
+      box-shadow: 0 6px 20px rgba(0, 119, 255, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 119, 255, 0.5);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    h1 {
+      font-size: 50px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 20px;
+      max-width: 700px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .btn {
+        width: 80%;
+        font-size: 16px;
+        padding: 14px 30px;
+      }
+    }
+
+    /* --- SERVICES SECTION --- */
+#services {
+  background: #f5fbff;
+  color: #0b2136;
+  text-align: center;
+  padding: 100px 40px;
+}
+
+#services h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#services p.section-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 60px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0, 210, 255, 0.2);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #00d2ff, #00ffaa);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #4b5563;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.service-card a {
+  color: #00d2ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.service-card a:hover {
+  color: #0077ff;
+}
+
+/* --- CASE STUDIES SECTION --- */
+#case-studies {
+  background: #f9fafb;
+  color: #0b2136;
+  text-align: center;
+  padding: 100px 40px;
+}
+
+#case-studies h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.case-studies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.case-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0, 210, 255, 0.2);
+}
+
+.case-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 210, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d2ff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.case-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.case-card p {
+  color: #4b5563;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.case-card a {
+  color: #00d2ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.case-card a:hover {
+  color: #0077ff;
+}
+
+/* Button under the cards */
+.case-btn {
+  display: inline-block;
+  background: white;
+  color: #0b2136;
+  padding: 14px 28px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.case-btn:hover {
+  background: #00d2ff;
+  color: white;
+  border-color: #00d2ff;
+  transform: translateY(-2px);
+}
+
+/* --- CALL TO ACTION (CTA) SECTION --- */
+#cta {
+  background: url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+#cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+#cta .cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#cta h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Primary gradient button */
+.cta-btn.primary {
+  background: linear-gradient(135deg, #00d2ff, #0077ff);
+  color: white;
+  border: none;
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 119, 255, 0.3);
+}
+
+/* Outline button */
+.cta-btn.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-btn.outline:hover {
+  background: white;
+  color: #0b2136;
+  transform: translateY(-3px);
+}
+
+/* --- FOOTER SECTION --- */
+footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 80px 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-column h4 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-column a {
+  display: block;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #00d2ff;
+}
+
+.footer-column p {
+  color: #9ca3af;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #6b7280;
+  border-top: 1px solid #1f2937;
+  padding-top: 20px;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Dime</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>INNOVATING SECURITY & ICT</h1>
+    <h1>FOR AFRICA</h1>
+    <p>Trusted by enterprises, government institutions, and private clients across East Africa</p>
+
+    <div class="btn-group">
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+      <a href="#contact" class="btn btn-primary">Request Consultation</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h1>Who We Are</h1>
+    <p>Dime Solutions Limited is a trusted partner in delivering cutting-edge ICT and Integrated Security Systems. We combine world-class technology, certified expertise, 
+      and ethical values to empower organizations and individuals with reliable, future-proof solutions.</p>
+    <div class="btn-group">
+      <a href="#services" class="btn btn-primary">Learn More About Us</a> 
+
+    </div>
+    
+       
+  </section>
+
+  <section id="services">
+  <h1>Our Core Services</h1>
+  <p class="section-subtitle">
+    Comprehensive solutions designed to protect, innovate, and scale your business
+  </p>
+
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>ICT Solutions</h3>
+      <p>
+        From cybersecurity and data centers to networking and enterprise software,
+        we deliver ICT solutions that power innovation and efficiency.
+      </p>
+      <a href="#">Learn more →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <h3>Security Solutions</h3>
+      <p>
+        We design and implement intelligent security systems including CCTV, access control,
+        intrusion detection, perimeter fencing, and consultancy.
+      </p>
+      <a href="#">Learn more →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🌐</div>
+      <h3>Digital & Consultancy</h3>
+      <p>
+        We help organizations thrive with digital marketing, ICT policy creation,
+        and corporate security training tailored to your environment.
+      </p>
+      <a href="#">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<section id="case-studies">
+  <h1>Proven Impact Across Sectors</h1>
+
+  <div class="case-studies-container">
+    <div class="case-card">
+      <div class="case-icon">✅</div>
+      <h3>Kenya Ports Authority</h3>
+      <p>Tier 3 Modular Data Centre with 99.99% uptime.</p>
+      <a href="#">View case study →</a>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">✅</div>
+      <h3>KenGen</h3>
+      <p>Health Management Information System for Olkaria Power Plant Clinic.</p>
+      <a href="#">View case study →</a>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">✅</div>
+      <h3>Coast Water Services Board</h3>
+      <p>Cybersecurity endpoint protection across six counties.</p>
+      <a href="#">View case study →</a>
+    </div>
+  </div>
+
+  <a href="#" class="case-btn">Explore More Case Studies →</a>
+</section>
+
+<!-- CALL TO ACTION SECTION -->
+<section id="cta">
+  <div class="cta-content">
+    <h1>Let's build your future-ready ICT and security environment today.</h1>
+    <div class="cta-buttons">
+      <a href="#contact" class="cta-btn primary">Request a Quote →</a>
+      <a href="#contact" class="cta-btn outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <div class="footer-logo">Dime Solutions</div>
+      <p>Innovating Security & ICT for Africa's Future.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#case-studies">Case Studies</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Services</h4>
+      <a href="#">ICT Solutions</a>
+      <a href="#">Security Solutions</a>
+      <a href="#">Digital Solutions</a>
+      <a href="#">Consultancy</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Pioneer Building, 4th Floor, Kimathi Street, Nairobi</p>
+      <p>📞 +254 723 060 800</p>
+      <p>📧 info@dimesolutions.co.ke</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Dime Solutions Limited. All Rights Reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Dime</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>INNOVATING SECURITY & ICT</h1>
+    <h1>FOR AFRICA</h1>
+    <p>Trusted by enterprises, government institutions, and private clients across East Africa</p>
+
+    <div class="btn-group">
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+      <a href="#contact" class="btn btn-primary">Request Consultation</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h1>Who We Are</h1>
+    <p>Dime Solutions Limited is a trusted partner in delivering cutting-edge ICT and Integrated Security Systems. We combine world-class technology, certified expertise, 
+      and ethical values to empower organizations and individuals with reliable, future-proof solutions.</p>
+    <div class="btn-group">
+      <a href="#services" class="btn btn-primary">Learn More About Us</a> 
+
+    </div>
+    
+       
+  </section>
+
+  <section id="services">
+  <h1>Our Core Services</h1>
+  <p class="section-subtitle">
+    Comprehensive solutions designed to protect, innovate, and scale your business
+  </p>
+
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>ICT Solutions</h3>
+      <p>
+        From cybersecurity and data centers to networking and enterprise software,
+        we deliver ICT solutions that power innovation and efficiency.
+      </p>
+      <a href="#">Learn more →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <h3>Security Solutions</h3>
+      <p>
+        We design and implement intelligent security systems including CCTV, access control,
+        intrusion detection, perimeter fencing, and consultancy.
+      </p>
+      <a href="#">Learn more →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🌐</div>
+      <h3>Digital & Consultancy</h3>
+      <p>
+        We help organizations thrive with digital marketing, ICT policy creation,
+        and corporate security training tailored to your environment.
+      </p>
+      <a href="#">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<section id="case-studies">
+  <h1>Proven Impact Across Sectors</h1>
+
+  <div class="case-studies-container">
+    <div class="case-card">
+      <div class="case-icon">✅</div>
+      <h3>Kenya Ports Authority</h3>
+      <p>Tier 3 Modular Data Centre with 99.99% uptime.</p>
+      <a href="#">View case study →</a>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">✅</div>
+      <h3>KenGen</h3>
+      <p>Health Management Information System for Olkaria Power Plant Clinic.</p>
+      <a href="#">View case study →</a>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">✅</div>
+      <h3>Coast Water Services Board</h3>
+      <p>Cybersecurity endpoint protection across six counties.</p>
+      <a href="#">View case study →</a>
+    </div>
+  </div>
+
+  <a href="#" class="case-btn">Explore More Case Studies →</a>
+</section>
+
+<!-- CALL TO ACTION SECTION -->
+<section id="cta">
+  <div class="cta-content">
+    <h1>Let's build your future-ready ICT and security environment today.</h1>
+    <div class="cta-buttons">
+      <a href="#contact" class="cta-btn primary">Request a Quote →</a>
+      <a href="#contact" class="cta-btn outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <div class="footer-logo">Dime Solutions</div>
+      <p>Innovating Security & ICT for Africa's Future.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#case-studies">Case Studies</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Services</h4>
+      <a href="#">ICT Solutions</a>
+      <a href="#">Security Solutions</a>
+      <a href="#">Digital Solutions</a>
+      <a href="#">Consultancy</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Pioneer Building, 4th Floor, Kimathi Street, Nairobi</p>
+      <p>📞 +254 740413951</p>
+      <p>📧 info@dimesolutions.co.ke</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Dime Solutions Limited. All Rights Reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>

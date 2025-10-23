@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dime Solutions | Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: url('https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 40px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00d2ff;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 80px 0;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #00d2ff;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .service-card h3 {
+      color: #00d2ff;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00d2ff, #6c5ce7);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 80px 40px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .footer-column h4 {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #9ca3af;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: #00d2ff;
+    }
+
+    .footer-column p {
+      color: #9ca3af;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #6b7280;
+      border-top: 1px solid #1f2937;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Dime</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" style="color:#00d2ff;">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="overlay">
+    <section id="hero">
+      <h1>Comprehensive ICT & Security Solutions</h1>
+      <p>Protect your assets with intelligent security solutions trusted by leading corporations</p>
+    </section>
+
+    <section>
+      <h2>ICT Solutions</h2>
+      <div class="services-grid">
+        <div class="service-card"><h3>Cybersecurity</h3><p>Protect your systems with enterprise-grade defense.</p></div>
+        <div class="service-card"><h3>Data Centers & Virtualization</h3><p>Build scalable, resilient IT environments.</p></div>
+        <div class="service-card"><h3>Networking & Structured Cabling</h3><p>Reliable, high-performance connectivity.</p></div>
+        <div class="service-card"><h3>Unified Communications</h3><p>IP telephony, video conferencing, and mobility solutions.</p></div>
+        <div class="service-card"><h3>Enterprise Software</h3><p>ERP, POS, fleet management, and custom systems.</p></div>
+        <div class="service-card"><h3>Web & Mobile Applications</h3><p>From institutional apps to e-commerce platforms.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Security Solutions</h2>
+      <div class="services-grid">
+        <div class="service-card"><h3>CCTV Surveillance</h3><p>Intelligent cameras with behavioral analytics.</p></div>
+        <div class="service-card"><h3>Access Control</h3><p>Fingerprint, facial ID, and advanced barrier systems.</p></div>
+        <div class="service-card"><h3>Intruder Detection</h3><p>Integrated ground and perimeter monitoring.</p></div>
+        <div class="service-card"><h3>Perimeter Security</h3><p>Anti-climb fences, bollards, and road blockers.</p></div>
+        <div class="service-card"><h3>Personal & Residential Security</h3><p>Custom solutions for high-net-worth clients.</p></div>
+        <div class="service-card"><h3>Security Consultancy</h3><p>Threat assessments, audits, and security planning.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Digital Solutions</h2>
+      <div class="services-grid">
+        <div class="service-card"><h3>Social Media Management</h3><p>Professional management of corporate accounts.</p></div>
+        <div class="service-card"><h3>SEO & SEM</h3><p>Boost visibility and drive quality traffic to your business.</p></div>
+        <div class="service-card"><h3>Content & Email Marketing</h3><p>Targeted campaigns that build brand loyalty.</p></div>
+        <div class="service-card"><h3>Digital PR & Advertising</h3><p>Right audience, right message, right time.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Consultancy Services</h2>
+      <div class="services-grid">
+        <div class="service-card"><h3>ICT Policy Creation</h3><p>Strategic ICT governance and frameworks.</p></div>
+        <div class="service-card"><h3>Training & Capacity Building</h3><p>Technical and professional development programs.</p></div>
+        <div class="service-card"><h3>Corporate Security Awareness</h3><p>Comprehensive security culture development.</p></div>
+        <div class="service-card"><h3>Project Security Consultancy</h3><p>Expert guidance for complex security projects.</p></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Need a Custom Solution?</h2>
+      <p>Our team can design a tailored solution that perfectly matches your unique requirements.</p>
+      <a href="contact.html" class="btn">Schedule a Consultation</a>
+    </section>
+  </div>
+
+  <!-- FOOTER (same as index.html & about.html) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <div class="footer-logo">Dime Solutions</div>
+        <p>Innovating Security & ICT for Africa's Future.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#case-studies">Case Studies</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Services</h4>
+        <a href="#">ICT Solutions</a>
+        <a href="#">Security Solutions</a>
+        <a href="#">Digital Solutions</a>
+        <a href="#">Consultancy</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Pioneer Building, 4th Floor, Kimathi Street, Nairobi</p>
+        <p>📞 +254 723 060 800</p>
+        <p>📧 info@dimesolutions.co.ke</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Dime Solutions Limited. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turquoise Solutions | Case Studies</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: url('https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 40px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00d2ff;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 80px 0;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      color: #00d2ff;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.7;
+      text-align: center;
+      font-size: 16px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .case-study {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 40px;
+      margin-bottom: 50px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .case-study:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-5px);
+    }
+
+    .case-study h3 {
+      color: #00d2ff;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .case-study h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #6c5ce7;
+    }
+
+    .case-study p {
+      text-align: left;
+      color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    .results {
+      background: rgba(0, 210, 255, 0.1);
+      padding: 15px 20px;
+      border-left: 4px solid #00d2ff;
+      border-radius: 8px;
+      color: #e0f7ff;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00d2ff, #6c5ce7);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 40px;
+    }
+
+    .footer-section {
+      max-width: 300px;
+    }
+
+    .footer-section h3 {
+      color: #00d2ff;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      line-height: 2;
+    }
+
+    .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #00d2ff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      width: 100%;
+      margin-top: 30px;
+      font-size: 14px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Turquoise</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="overlay">
+  <section>
+    <h1>Case Studies</h1>
+    <p>Real results for Kenya's leading organizations — delivering excellence, security, and innovation.</p>
+  </section>
+
+  <section class="case-study">
+    <h2>ICT Infrastructure</h2>
+    <h3>Kenya Ports Authority – Tier 3 Data Centre Infrastructure</h3>
+    <h4>Challenge</h4>
+    <p>KPA required a highly reliable data center to support port operations, ensuring maximum uptime and seamless relocation from its existing infrastructure.</p>
+    <h4>Solution</h4>
+    <p>Turquoise Solutions implemented a Tier 3 Modular Data Centre powered by Huawei's state-of-the-art technology. Our team successfully migrated existing equipment to the new facility with minimal downtime.</p>
+    <div class="results">
+      <p><strong>Results:</strong></p>
+      <ul>
+        <li>99.99% uptime guarantee</li>
+        <li>Mission-critical operations run securely and efficiently</li>
+        <li>Supports both national and regional logistics</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-study">
+    <h2>Software Development</h2>
+    <h3>KenGen – Health Management Information System</h3>
+    <h4>Challenge</h4>
+    <p>KenGen needed a secure, digital health records system for its Olkaria Power Plant Clinic to enhance data privacy and streamline operations.</p>
+    <h4>Solution</h4>
+    <p>We designed and implemented a Health Management Information System (HMIS) integrating data processing, reporting, and analytics into a secure digital workflow.</p>
+    <div class="results">
+      <p><strong>Results:</strong></p>
+      <ul>
+        <li>Paperless, secure, and efficient system</li>
+        <li>Protected patient information</li>
+        <li>Improved healthcare delivery</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-study">
+    <h2>Cybersecurity</h2>
+    <h3>Coast Water Services Board – Enterprise Endpoint Security</h3>
+    <h4>Challenge</h4>
+    <p>CWSB required robust protection for endpoint devices across six coastal counties, which were increasingly exposed to cyber threats.</p>
+    <h4>Solution</h4>
+    <p>We deployed Kaspersky Endpoint Security, safeguarding devices against both known and unknown threats. Deployment was centrally managed for efficiency.</p>
+    <div class="results">
+      <p><strong>Results:</strong></p>
+      <ul>
+        <li>Proactive cyber defense</li>
+        <li>Reduced vulnerabilities</li>
+        <li>Improved trust in ICT infrastructure</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-study">
+    <h2>Integrated Security</h2>
+    <h3>Private High-Net-Worth Client (Confidential)</h3>
+    <h4>Challenge</h4>
+    <p>A private client faced rising risks of burglary, social engineering attacks, and digital threats targeting their residence and personal data.</p>
+    <h4>Solution</h4>
+    <p>We designed a comprehensive residential and personal security plan, combining smart CCTV, biometric access control, intrusion detection, and cyber protection.</p>
+    <div class="results">
+      <p><strong>Results:</strong></p>
+      <ul>
+        <li>Round-the-clock security monitoring</li>
+        <li>Integrated safety measures</li>
+        <li>Peace of mind for digital and physical security</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Proven Results. Trusted Partnerships.</h2>
+    <p>From national parastatals to private residences, Turquoise Solutions delivers secure, innovative, and scalable ICT and security systems.</p>
+    <a href="contact.html" class="btn">Request a Consultation</a>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-section">
+    <h3>Turquoise Solutions</h3>
+    <p>Innovating Security & ICT for Africa's Future.</p>
+  </div>
+  <div class="footer-section">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Services</h3>
+    <ul>
+      <li><a href="#">ICT Solutions</a></li>
+      <li><a href="#">Security Solutions</a></li>
+      <li><a href="#">Digital Solutions</a></li>
+      <li><a href="#">Consultancy</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Contact</h3>
+    <p>Pioneer Building, 4th Floor, Kimathi Street, Nairobi</p>
+    <p>📞 +254 723 060 800</p>
+    <p>📧 info@turquoise.co.ke</p>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Turquoise Solutions Limited. All rights reserved.<br>
+    ISO Certified | Partners: Huawei, Kaspersky, and more.
+  </div>
+</footer>
+
+</body>
+</html>
